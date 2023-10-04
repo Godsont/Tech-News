@@ -2,26 +2,35 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+.btn {
+  @apply bg-slate-200 px-4 py-2 rounded-md font-semibold hover:scale-105 transition;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+h1 {
+  @apply text-2xl font-bold;
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+h2 {
+  @apply text-2xl font-bold my-4;
+}
+
+p.content {
+  @apply leading-loose;
+}
+
+.link {
+  @apply text-[#7563DF] font-bold max-w-full overflow-hidden text-ellipsis;
+}
+
+.primary-btn {
+  @apply px-4 py-2 bg-slate-800 text-white rounded-md;
+}
+
+input,
+textarea {
+  @apply px-4 py-2 border border-slate-300 rounded-md;
+}
+
+textarea {
+  @apply h-36;
 }
